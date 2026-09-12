@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CYNC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F7F3EC;
+    --ink:#171717;
+    --accent:#FF5A1F;
+    --accent-soft:#FF9A66;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#171717;
+      --ink:#F7F3EC;
+      --accent:#FF6B38;
+      --accent-soft:#FFB088;
+    }
+  }
+  *{box-sizing:border-box;}
+  html,body{height:100%;}
+  body{
+    margin:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:"Archivo Black","Inter",system-ui,sans-serif;
+  }
+  .logo{
+    display:flex;
+    align-items:center;
+    gap:clamp(14px, 3vw, 26px);
+  }
+  .logo svg{
+    width:clamp(56px, 9vw, 96px);
+    height:clamp(56px, 9vw, 96px);
+    flex-shrink:0;
+  }
+  .logo span{
+    font-size:clamp(40px, 10vw, 96px);
+    letter-spacing:-0.01em;
+    line-height:1;
+  }
+</style>
+</head>
+<body>
+  <div class="logo">
+    <svg viewBox="0 0 100 100" aria-hidden="true">
+      <g fill="none" stroke="var(--accent)" stroke-width="7" stroke-linecap="round">
+        <line x1="50" y1="10" x2="83.5" y2="30.5"></line>
+        <line x1="16.5" y1="69.5" x2="16.5" y2="30.5"></line>
+        <line x1="16.5" y1="69.5" x2="50" y2="90"></line>
+        <line x1="50" y1="90" x2="83.5" y2="69.5"></line>
+      </g>
+      <g>
+        <circle cx="50" cy="10" r="10" fill="var(--accent)"></circle>
+        <circle cx="83.5" cy="30.5" r="9" fill="var(--accent-soft)"></circle>
+        <circle cx="83.5" cy="69.5" r="9" fill="var(--accent-soft)"></circle>
+        <circle cx="50" cy="90" r="10" fill="var(--accent)"></circle>
+        <circle cx="16.5" cy="69.5" r="10" fill="var(--accent)"></circle>
+        <circle cx="16.5" cy="30.5" r="10" fill="var(--accent)"></circle>
+      </g>
+    </svg>
+    <span>CYNC</span>
+  </div>
+</body>
+</html>
