@@ -178,8 +178,9 @@ button:focus-visible,
 .hero-title{
   font-weight: 700;
   font-size: clamp(2.4rem, 1.7rem + 3.6vw, 4.625rem);
-  line-height: 0.95;
+  line-height: 1.02;
   letter-spacing: -0.038em;
+  word-spacing: 0.22em;
 }
 .lede{
   margin-top: 1.5rem;
@@ -260,8 +261,9 @@ button:focus-visible,
 .section-title{
   font-weight: 700;
   font-size: clamp(1.65rem, 1.4rem + 1.6vw, 2.75rem);
-  line-height: 1.03;
+  line-height: 1.08;
   letter-spacing: -0.03em;
+  word-spacing: 0.2em;
 }
 .section-dark .section-title{ color: var(--paper); }
 
@@ -589,8 +591,9 @@ button:focus-visible,
 .footer-title{
   font-weight: 700;
   font-size: clamp(2.1rem, 1.6rem + 3vw, 3.875rem);
-  line-height: 0.98;
+  line-height: 1.04;
   letter-spacing: -0.035em;
+  word-spacing: 0.2em;
 }
 .footer-lede{ margin-top: 1rem; max-width: 46ch; color: var(--paper-strong); font-size: 1.0625rem; line-height: 1.6; }
 
