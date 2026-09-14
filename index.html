@@ -49,6 +49,7 @@
     </a>
 
     <nav class="nav-links" aria-label="Navegação principal">
+      <a href="#processo">Como trabalhamos</a>
       <a href="#planos">Planos</a>
       <a href="#contato">Contato</a>
       <a href="#contato" class="nav-link-cta">Solicitar orçamento</a>
@@ -205,17 +206,52 @@
     </div>
   </section>
 
+  <!-- processo -->
+  <section class="section" id="processo">
+    <div class="wrap">
+      <h2 class="section-title">Como trabalhamos, do primeiro contato à entrega.</h2>
+      <p class="body-text">Quatro etapas, sempre nessa ordem. O orçamento sai fechado na etapa 2, antes de qualquer linha de código.</p>
+
+      <div class="timeline">
+        <div class="tl-step">
+          <span class="tl-dot" aria-hidden="true"></span>
+          <span class="tl-num">01</span>
+          <h3>Conversa inicial</h3>
+          <p>Entendemos o problema, o objetivo e o prazo antes de falar em solução.</p>
+        </div>
+        <div class="tl-step">
+          <span class="tl-dot" aria-hidden="true"></span>
+          <span class="tl-num">02</span>
+          <h3>Proposta</h3>
+          <p>Escopo, entregáveis e orçamento por escrito, sob medida para o seu projeto.</p>
+        </div>
+        <div class="tl-step">
+          <span class="tl-dot" aria-hidden="true"></span>
+          <span class="tl-num">03</span>
+          <h3>Construção em ciclos</h3>
+          <p>Entregas incrementais toda semana. Você acompanha o que está pronto, não uma promessa.</p>
+        </div>
+        <div class="tl-step">
+          <span class="tl-dot" aria-hidden="true"></span>
+          <span class="tl-num">04</span>
+          <h3>Lançamento e acompanhamento</h3>
+          <p>Suporte na virada de chave e nas primeiras semanas em produção.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- planos -->
   <section class="section section-sunken" id="planos">
     <div class="wrap">
       <h2 class="section-title">Nossos Planos</h2>
-      <p class="body-text">Três formas de contratar, direto ao ponto. O valor final é sempre confirmado com base no escopo do seu projeto.</p>
+      <p class="body-text">Três frentes de trabalho. A CYNC ainda não teve clientes anteriores — o que significa atenção total dos fundadores ao seu projeto, sem fila de atendimento. O valor exato sai fechado na proposta, depois de entendermos o que você precisa.</p>
 
       <div class="plans-grid">
         <div class="plan-card">
           <div class="plan-head">
             <h3 class="plan-name">Landing Page</h3>
-            <p class="plan-price">a partir de <span class="placeholder-value">R$ [VALOR]</span></p>
+            <p class="plan-price">Orçamento sob consulta</p>
           </div>
           <p class="plan-desc">Página única para captar demanda e validar uma oferta antes do desenvolvimento completo. Inclui navegação, texto de venda e formulário de captura.</p>
           <a href="#contato" class="btn btn-primary plan-cta">Solicitar orçamento</a>
@@ -224,19 +260,19 @@
         <div class="plan-card">
           <div class="plan-head">
             <h3 class="plan-name">Chatbot</h3>
-            <p class="plan-price">a partir de <span class="placeholder-value">R$ [VALOR]</span></p>
+            <p class="plan-price">Orçamento sob consulta</p>
           </div>
-          <p class="plan-desc">Automação de WhatsApp construída para o seu catálogo e o seu processo de venda, conectada ao fluxo real de pedidos. Não é um bot genérico.</p>
+          <p class="plan-desc">Conectada ao seu catálogo e ao fluxo real de pedidos, feita sob medida para o seu processo de venda, do primeiro contato ao fechamento.</p>
           <a href="#contato" class="btn btn-primary plan-cta">Solicitar orçamento</a>
         </div>
 
         <div class="plan-card plan-card-featured">
-          <span class="plan-badge">Mais completo</span>
+          <span class="plan-badge">Funil completo</span>
           <div class="plan-head">
             <h3 class="plan-name">Landing Page + Chatbot</h3>
-            <p class="plan-price">a partir de <span class="placeholder-value">R$ [VALOR]</span></p>
+            <p class="plan-price">Orçamento sob consulta</p>
           </div>
-          <p class="plan-desc">A landing page capta o lead e o chatbot conduz a conversa até a venda, os dois integrados desde o início.</p>
+          <p class="plan-desc">A landing page gera o lead, o chatbot conduz a conversa até a venda. Os dois construídos juntos, como um funil só, não dois projetos separados.</p>
           <a href="#contato" class="btn btn-primary plan-cta">Solicitar orçamento</a>
         </div>
       </div>
@@ -246,20 +282,52 @@
 </main>
 
 <footer class="footer" id="contato">
+  <div class="wrap footer-grid">
+    <div class="footer-intro">
+      <h2 class="footer-title">Tem um projeto parado ou uma ideia ainda em estágio inicial?</h2>
+      <p class="footer-lede">Preencha o formulário. A resposta vem de quem vai escrever o código do seu projeto, não de um atendente terceirizado.</p>
+
+      <div class="footer-contact">
+        <!-- TODO: e-mail e WhatsApp institucionais ainda não existem. Assim que tiver os dois, troque os placeholders abaixo. -->
+        <p><span class="contact-label">E-mail</span> <span class="placeholder-value">[em configuração]</span></p>
+        <p><span class="contact-label">WhatsApp</span> <a class="placeholder-value" href="https://wa.me/SEUNUMERO">[SEU NÚMERO]</a></p>
+      </div>
+    </div>
+
+    <!--
+      TODO: formulário via Formspree (não exige backend).
+      1. Crie uma conta grátis em https://formspree.io e um form novo.
+      2. Formspree te dá um endpoint tipo https://formspree.io/f/abcdwxyz.
+      3. Troque o action abaixo por esse endpoint. Pronto, os envios caem no e-mail que você cadastrar lá
+         (pode ser um e-mail pessoal por enquanto, não precisa ser o institucional).
+    -->
+    <form class="contact-form" action="https://formspree.io/f/SEU_FORM_ID" method="POST">
+      <div class="form-row">
+        <label for="f-nome">Nome</label>
+        <input type="text" id="f-nome" name="nome" autocomplete="name" required>
+      </div>
+      <div class="form-row">
+        <label for="f-email">E-mail</label>
+        <input type="email" id="f-email" name="email" autocomplete="email" required>
+      </div>
+      <div class="form-row">
+        <label for="f-interesse">O que você precisa</label>
+        <select id="f-interesse" name="interesse">
+          <option>Landing Page</option>
+          <option>Chatbot</option>
+          <option>Landing Page + Chatbot</option>
+          <option>Outro / ainda não sei</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label for="f-mensagem">Conte um pouco do projeto</label>
+        <textarea id="f-mensagem" name="mensagem" rows="4" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Solicitar orçamento</button>
+    </form>
+  </div>
+
   <div class="wrap">
-    <h2 class="footer-title">Tem um projeto parado ou uma ideia ainda em estágio inicial?</h2>
-    <p class="footer-lede">Fale com a nossa equipe. Você vai falar com quem escreveu o código do seu projeto, não com um atendente terceirizado.</p>
-
-    <div class="footer-actions">
-      <a href="mailto:contato@cyncsoftwarehouse.com" class="btn btn-primary">Solicitar orçamento</a>
-    </div>
-
-    <div class="footer-contact">
-      <p><span class="contact-label">E-mail</span> <a href="mailto:contato@cyncsoftwarehouse.com">contato@cyncsoftwarehouse.com</a></p>
-      <!-- TODO: substituir pelo número real de WhatsApp da CYNC -->
-      <p><span class="contact-label">WhatsApp</span> <a class="placeholder-value" href="https://wa.me/SEUNUMERO">[SEU NÚMERO]</a></p>
-    </div>
-
     <div class="footer-bottom">
       <a href="#top" class="footer-brand">
         <svg class="mark" viewBox="0 0 200 200" aria-hidden="true"><use href="#cync-mark"/></svg>
