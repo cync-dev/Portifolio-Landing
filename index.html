@@ -295,13 +295,12 @@
     </div>
 
     <!--
-      TODO: formulário via Formspree (não exige backend).
-      1. Crie uma conta grátis em https://formspree.io e um form novo.
-      2. Formspree te dá um endpoint tipo https://formspree.io/f/abcdwxyz.
-      3. Troque o action abaixo por esse endpoint. Pronto, os envios caem no e-mail que você cadastrar lá
-         (pode ser um e-mail pessoal por enquanto, não precisa ser o institucional).
+      Formulário via Formspree (não exige backend). O envio é feito via JavaScript
+      (assets/js/main.js), então o visitante nunca sai do site nem vê a página do Formspree —
+      ele preenche e envia tudo aqui, e uma mensagem de confirmação aparece no lugar do formulário.
+      No primeiro envio real, o Formspree manda um e-mail de confirmação pra você clicar (anti-spam).
     -->
-    <form class="contact-form" action="https://formspree.io/f/SEU_FORM_ID" method="POST">
+    <form class="contact-form" id="contact-form" action="https://formspree.io/f/xljeqwoj" method="POST">
       <div class="form-row">
         <label for="f-nome">Nome</label>
         <input type="text" id="f-nome" name="nome" autocomplete="name" required>
@@ -324,6 +323,7 @@
         <textarea id="f-mensagem" name="mensagem" rows="4" required></textarea>
       </div>
       <button type="submit" class="btn btn-primary">Solicitar orçamento</button>
+      <p class="form-status" role="status" aria-live="polite" hidden></p>
     </form>
   </div>
 

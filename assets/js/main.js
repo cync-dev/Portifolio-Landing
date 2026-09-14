@@ -76,4 +76,41 @@
       observer.observe(phoneFrame);
     }
   }
+
+  /* ---- contact form: submit via fetch so the visitor never leaves the site ---- */
+  var contactForm = document.getElementById("contact-form");
+  if (contactForm) {
+    var status = contactForm.querySelector(".form-status");
+    var submitBtn = contactForm.querySelector("button[type=submit]");
+
+    contactForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      submitBtn.disabled = true;
+      status.hidden = false;
+      status.textContent = "Enviando...";
+
+      fetch(contactForm.action, {
+        method: "POST",
+        body: new FormData(contactForm),
+        headers: { Accept: "application/json" }
+      })
+        .then(function (response) {
+          if (response.ok) {
+            contactForm.reset();
+            Array.prototype.forEach.call(contactForm.querySelectorAll(".form-row, button[type=submit]"), function (el) {
+              el.hidden = true;
+            });
+            status.textContent = "Mensagem enviada. A gente responde em breve.";
+          } else {
+            submitBtn.disabled = false;
+            status.textContent = "Não deu pra enviar agora. Tenta de novo em instantes, ou chama no WhatsApp.";
+          }
+        })
+        .catch(function () {
+          submitBtn.disabled = false;
+          status.textContent = "Não deu pra enviar agora. Tenta de novo em instantes, ou chama no WhatsApp.";
+        });
+    });
+  }
 })();
