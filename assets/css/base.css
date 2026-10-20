@@ -51,11 +51,18 @@ button:focus-visible,
 }
 .btn:active{ transform: scale(0.97); }
 
-/* ATENÇÃO: laranja sobre off-white dá ~2,8:1 e reprova em WCAG AA.
-   A correção conforme o manual é trocar var(--accent) por
-   var(--accent-on-light) nas duas linhas abaixo. Ver README. */
-.btn-primary{ background: var(--accent); color: var(--bg); }
-.btn-primary:hover{ background: var(--accent-dark); }
+/* Off-white sobre o laranja puro dava 2,82:1 e reprovava em WCAG AA, num botão
+   que é o CTA principal e se repete seis vezes na página. Corrigido em 20/10/2026:
+   branco puro sobre o terracota var(--accent-on-light) dá 5,84:1, o maior contraste
+   entre as combinações possíveis da paleta, e mantém o texto claro no botão.
+
+   O laranja #FF5A1F é CLARO em luminância, então ele só aceita texto escuro:
+   branco em cima dele dá 3,12:1 e off-white dá 2,82:1, os dois reprovam. Os dois
+   pares válidos são branco sobre terracota (este) e grafite sobre laranja (5,75:1).
+   Misturar os dois é o que reintroduz o problema. Use #FFF aqui, não var(--bg),
+   que é off-white e cairia para 5,28:1. */
+.btn-primary{ background: var(--accent-on-light); color: #FFFFFF; }
+.btn-primary:hover{ background: #8F2A08; }
 
 .link-secondary{
   display: inline-flex;

@@ -66,7 +66,7 @@
   --orange-soft:   var(--accent-light);
   --orange-wash:   var(--accent-wash);
   --paper-strong:  rgba(247,243,236,0.62);
-  --paper-soft:    rgba(247,243,236,0.45);
+  --paper-soft:    rgba(247,243,236,0.62);  /* 7,0:1 no grafite; a 0.45 dava 4,27:1 */
   --paper-line:    rgba(247,243,236,0.16);
   --shadow-warm:   var(--shadow-lg);
   --radius-btn:    var(--radius-sm);
