@@ -1,0 +1,70 @@
+/* Base — reset, acessibilidade, tipografia, botões e utilitários.
+   Não contém nenhuma cor literal: só var(--token) declarado em tema.css.
+   Contrato: ../../../guideline-landing-pages/docs/05-css-e-tokens.md */
+
+*, *::before, *::after{ box-sizing: border-box; }
+
+html{ scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce){ html{ scroll-behavior: auto; } }
+
+body{
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: 1.0313rem;
+  line-height: 1.62;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3{ margin: 0; text-wrap: balance; font-family: var(--font-display); }
+p{ margin: 0; }
+ul, ol, dl{ margin: 0; padding: 0; list-style: none; }
+a{ color: inherit; text-decoration: none; }
+img, svg{ display: block; max-width: 100%; }
+button{ font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+
+/* ---- layout e acessibilidade ---- */
+.wrap{ max-width: var(--max); margin-inline: auto; padding-inline: var(--edge); }
+
+.sprite-defs{ position: absolute; width: 0; height: 0; }
+
+a:focus-visible,
+button:focus-visible,
+.hero-symbol:focus-visible{
+  outline: 2px solid var(--fg);
+  outline-offset: 3px;
+}
+
+/* ---- botões ---- */
+.btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.875rem 1.625rem;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.9375rem;
+  white-space: nowrap;
+  border-radius: var(--radius-sm);
+  transition: background-color 0.15s ease, transform 0.1s ease;
+}
+.btn:active{ transform: scale(0.97); }
+
+/* ATENÇÃO: laranja sobre off-white dá ~2,8:1 e reprova em WCAG AA.
+   A correção conforme o manual é trocar var(--accent) por
+   var(--accent-on-light) nas duas linhas abaixo. Ver README. */
+.btn-primary{ background: var(--accent); color: var(--bg); }
+.btn-primary:hover{ background: var(--accent-dark); }
+
+.link-secondary{
+  display: inline-flex;
+  align-items: center;
+  margin-top: 0.75rem;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  color: var(--accent-dark);
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 1px;
+}
+.section-dark .link-secondary{ color: var(--accent-light); }

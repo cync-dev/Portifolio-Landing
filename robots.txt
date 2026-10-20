@@ -1,0 +1,6 @@
+# CYNC Software House
+
+User-agent: *
+Allow: /
+
+Sitemap: https://www.cync.com.br/sitemap.xml

@@ -1,100 +1,7 @@
-/* ===========================================================
-   CYNC Software House — landing page
-   Direction: editorial quente. Impresso técnico em papel off-white.
-   =========================================================== */
+/* CYNC — layout e componentes desta página.
+   Tokens em tema.css; reset, botões e utilitários em base.css.
+   Contrato: ../../../guideline-landing-pages/docs/05-css-e-tokens.md */
 
-:root{
-  --paper:        #F7F3EC;
-  --paper-raised: #FFFDF9;
-  --paper-sunken: #EFE9DC;
-  --ink:          #171717;
-  --ink-strong:   rgba(23,23,23,0.62);
-  --ink-soft:     rgba(23,23,23,0.45);
-  --line:         rgba(23,23,23,0.09);
-  --orange:       #FF5A1F;
-  --terracotta:   #B9360B;
-  --orange-soft:  #FF9A66;
-  --orange-wash:  #FFE3D6;
-
-  --paper-strong: rgba(247,243,236,0.62);
-  --paper-soft:   rgba(247,243,236,0.45);
-  --paper-line:   rgba(247,243,236,0.16);
-
-  --font-display: "Clash Display", "Arial Black", sans-serif;
-  --font-body: "Inter", system-ui, -apple-system, sans-serif;
-
-  --shadow-warm: 0 20px 44px -34px rgba(70,40,20,0.4);
-  --radius-btn: 5px;
-  --radius-card: 10px;
-
-  --max: 1180px;
-  --edge: clamp(20px, 5vw, 64px);
-
-  color-scheme: light;
-}
-
-*, *::before, *::after{ box-sizing: border-box; }
-
-html{ scroll-behavior: smooth; }
-@media (prefers-reduced-motion: reduce){ html{ scroll-behavior: auto; } }
-
-body{
-  margin: 0;
-  background: var(--paper);
-  color: var(--ink);
-  font-family: var(--font-body);
-  font-size: 1.0313rem;
-  line-height: 1.62;
-  -webkit-font-smoothing: antialiased;
-}
-
-h1, h2, h3{ margin: 0; text-wrap: balance; font-family: var(--font-display); }
-p{ margin: 0; }
-ul, ol, dl{ margin: 0; padding: 0; list-style: none; }
-a{ color: inherit; text-decoration: none; }
-img, svg{ display: block; max-width: 100%; }
-button{ font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
-
-.wrap{ max-width: var(--max); margin-inline: auto; padding-inline: var(--edge); }
-
-.sprite-defs{ position: absolute; width: 0; height: 0; }
-
-a:focus-visible,
-button:focus-visible,
-.hero-symbol:focus-visible{
-  outline: 2px solid var(--ink);
-  outline-offset: 3px;
-}
-
-/* ---------- buttons ---------- */
-.btn{
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.875rem 1.625rem;
-  font-family: var(--font-body);
-  font-weight: 700;
-  font-size: 0.9375rem;
-  white-space: nowrap;
-  border-radius: var(--radius-btn);
-  transition: background-color 0.15s ease, transform 0.1s ease;
-}
-.btn:active{ transform: scale(0.97); }
-
-.btn-primary{ background: var(--orange); color: var(--paper); }
-.btn-primary:hover{ background: var(--terracotta); }
-
-.link-secondary{
-  display: inline-flex;
-  align-items: center;
-  margin-top: 0.75rem;
-  font-weight: 600;
-  font-size: 0.9375rem;
-  color: var(--terracotta);
-  border-bottom: 1px solid currentColor;
-  padding-bottom: 1px;
-}
-.section-dark .link-secondary{ color: var(--orange-soft); }
 
 /* ---------- nav ---------- */
 .nav{
@@ -601,7 +508,6 @@ button:focus-visible,
 .footer-contact p{ font-size: 0.9375rem; color: var(--paper-strong); }
 .footer-contact a{ font-weight: 700; color: var(--paper); border-bottom: 1px solid var(--paper-line); }
 .contact-label{ display: inline-block; min-width: 5.5rem; color: var(--paper-soft); }
-.placeholder-value{ font-weight: 700; color: var(--orange-soft); }
 
 .contact-form{
   display: flex;
