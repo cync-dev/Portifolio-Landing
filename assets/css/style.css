@@ -256,7 +256,7 @@
   float: right;
   margin: 0.25rem 0 -0.125rem 0.5rem;
   font-size: 0.625rem;
-  color: rgba(17,27,33,0.45);
+  color: rgba(17,27,33,0.62);
 }
 .bubble-out .ticks{ width: 14px; height: 10px; color: #53BDEB; }
 
@@ -304,7 +304,7 @@
   border-radius: 999px;
 }
 .input-pill svg{ width: 22px; height: 22px; flex-shrink: 0; }
-.input-pill span{ flex: 1; font-size: 0.875rem; }
+.input-pill span{ flex: 1; font-size: 0.875rem; color: rgba(17,27,33,0.62); }
 .input-pill .cam-icon{ color: rgba(17,27,33,0.55); }
 .mic-btn{
   flex-shrink: 0;
@@ -323,67 +323,58 @@
   font-weight: 600;
   color: var(--paper-soft);
 }
-
 @media (max-width: 760px){
   .demo-grid{ grid-template-columns: 1fr; }
 }
 
-/* ---------- landing pages demo ---------- */
-.landing-grid{
+/* ---------- vitrine de nichos ---------- */
+.vitrine{
   display: grid;
-  grid-template-columns: minmax(0,1fr) minmax(300px, 0.95fr);
-  gap: clamp(2rem, 6vw, 4.5rem);
-  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: clamp(1.25rem, 2.5vw, 1.75rem);
+  margin-top: 2.75rem;
+  list-style: none;
 }
-.browser-wrap{ display: flex; flex-direction: column; align-items: center; gap: 0.875rem; }
-.browser-frame{
-  width: 100%;
-  max-width: 460px;
-  background: var(--paper-raised);
+.vitrine-card{
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  padding: 1.75rem 1.5rem;
+  background: var(--bg-raised);
   border: 1px solid var(--line);
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: var(--shadow-warm);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-sm);
 }
-.browser-bar{
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.625rem 0.75rem;
-  background: var(--paper-sunken);
-  border-bottom: 1px solid var(--line);
-}
-.browser-dot{ width: 9px; height: 9px; border-radius: 50%; background: var(--ink-soft); opacity: 0.35; }
-.browser-url{
-  margin-left: 0.5rem;
-  padding: 0.25rem 0.75rem;
-  background: var(--paper);
-  border-radius: 999px;
+.vitrine-nicho{
   font-size: 0.75rem;
-  color: var(--ink-soft);
-  flex: 1;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--accent-on-light);
 }
-.browser-screen{ padding: 1.5rem 1.25rem 2rem; }
-.mock-nav{
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  padding-bottom: 1.5rem;
-  border-bottom: 1px solid var(--line);
-  margin-bottom: 1.75rem;
+.vitrine-title{
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
 }
-.mock-logo{ width: 22px; height: 22px; border-radius: 50%; background: var(--orange); flex-shrink: 0; }
-.mock-link{ width: 44px; height: 8px; border-radius: 4px; background: var(--line); }
-.mock-cta-small{ margin-left: auto; width: 64px; height: 20px; border-radius: 999px; background: var(--orange-wash); flex-shrink: 0; }
-.mock-hero{ display: flex; flex-direction: column; gap: 0.75rem; }
-.mock-line{ display: block; height: 14px; border-radius: 4px; background: var(--line); }
-.mock-line-lg{ width: 85%; height: 20px; }
-.mock-line-md{ width: 70%; }
-.mock-line-sm{ width: 55%; margin-bottom: 0.5rem; }
-.mock-cta{ margin-top: 0.75rem; width: 132px; height: 34px; border-radius: var(--radius-btn); background: var(--orange); }
-
-@media (max-width: 760px){
-  .landing-grid{ grid-template-columns: 1fr; }
+.vitrine-desc{ flex: 1; color: var(--ink-strong); font-size: 0.9375rem; line-height: 1.6; }
+.vitrine-link{
+  align-self: flex-start;
+  margin-top: 0.375rem;
+  font-weight: 700;
+  font-size: 0.9375rem;
+  color: var(--accent-on-light);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.vitrine-link:hover{ color: #8F2A08; }
+.vitrine-nota{
+  margin-top: 1.5rem;
+  max-width: 68ch;
+  color: var(--fg-muted);
+  font-size: 0.875rem;
+  line-height: 1.6;
 }
 
 /* ---------- perfis ---------- */
@@ -431,7 +422,7 @@
   font-family: var(--font-display);
   font-weight: 700;
   font-size: clamp(1.8rem, 1.5rem + 1.6vw, 2.75rem);
-  color: var(--ink-soft);
+  color: var(--fg-muted);   /* era --ink-soft, 2,88:1 em texto grande */
   line-height: 1;
   margin-bottom: 0.5rem;
 }
@@ -471,7 +462,7 @@
   padding: 0.25rem 0.75rem;
   border-radius: 999px;
   background: var(--orange);
-  color: var(--paper);
+  color: var(--fg);   /* grafite sobre o laranja dá 5,86:1; off-white dava 2,82:1 */
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.02em;
@@ -506,7 +497,16 @@
 
 .footer-contact{ margin-top: 2.25rem; display: flex; flex-direction: column; gap: 0.5rem; }
 .footer-contact p{ font-size: 0.9375rem; color: var(--paper-strong); }
-.footer-contact a{ font-weight: 700; color: var(--paper); border-bottom: 1px solid var(--paper-line); }
+/* Alvo de toque: os links de e-mail e telefone ficavam com 20px de altura, abaixo
+   do mínimo de 24px do WCAG 2.2 AA (critério 2.5.8). */
+.footer-contact a{
+  display: inline-block;
+  min-height: 24px;
+  padding: 2px 0;
+  font-weight: 700;
+  color: var(--paper);
+  border-bottom: 1px solid var(--paper-line);
+}
 .contact-label{ display: inline-block; min-width: 5.5rem; color: var(--paper-soft); }
 
 .contact-form{
