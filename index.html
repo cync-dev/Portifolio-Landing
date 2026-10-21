@@ -250,7 +250,7 @@
   <section class="section section-sunken" id="planos">
     <div class="wrap">
       <h2 class="section-title">Nossos Planos</h2>
-      <p class="body-text">Três frentes de trabalho. A CYNC ainda não teve clientes anteriores, o que significa atenção total dos fundadores ao seu projeto, sem fila de atendimento. O valor exato sai fechado na proposta, depois de entendermos o que você precisa.</p>
+      <p class="body-text">Três frentes de trabalho. Atendimento e desenvolvimento direto com os fundadores e engenheiros técnicos, com acompanhamento próximo e sem intermediários. O valor exato sai fechado na proposta, depois de entendermos o que você precisa.</p>
 
       <div class="plans-grid">
         <div class="plan-card">
@@ -293,7 +293,7 @@
       <p class="footer-lede">Preencha o formulário. A resposta vem de quem vai escrever o código do seu projeto, não de um atendente terceirizado.</p>
 
       <div class="footer-contact">
-        <p><span class="contact-label">E-mail</span> <a href="mailto:odomingosdavi@gmail.com">odomingosdavi@gmail.com</a></p>
+        <p><span class="contact-label">E-mail</span> <a href="mailto:contato@cync.com.br">contato@cync.com.br</a></p>
         <p><span class="contact-label">WhatsApp</span> <a href="https://wa.me/5582981879661?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20CYNC%20e%20quero%20falar%20sobre%20um%20projeto." target="_blank" rel="noopener">(82) 98187-9661</a></p>
       </div>
     </div>
@@ -305,6 +305,8 @@
       No primeiro envio real, o Formspree manda um e-mail de confirmação pra você clicar (anti-spam).
     -->
     <form class="contact-form" id="contact-form" action="https://formspree.io/f/xljeqwoj" method="POST">
+      <!-- Proteção anti-spam via honeypot (oculto para humanos, preenchido por robôs) -->
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none !important;" aria-hidden="true">
       <div class="form-row">
         <label for="f-nome">Nome</label>
         <input type="text" id="f-nome" name="nome" autocomplete="name" required>
@@ -327,6 +329,7 @@
         <textarea id="f-mensagem" name="mensagem" rows="4" required></textarea>
       </div>
       <button type="submit" class="btn btn-primary">Solicitar orçamento</button>
+      <p class="form-privacy">Ao enviar, você concorda com o contato da CYNC exclusivamente sobre este projeto. Seus dados não são compartilhados com terceiros.</p>
       <p class="form-status" role="status" aria-live="polite" hidden></p>
     </form>
   </div>

@@ -86,6 +86,18 @@
     contactForm.addEventListener("submit", function (event) {
       event.preventDefault();
 
+      /* honeypot anti-spam check: se bot preencheu, encerra sem mandar requisição */
+      var gotcha = contactForm.querySelector("input[name=_gotcha]");
+      if (gotcha && gotcha.value) {
+        contactForm.reset();
+        Array.prototype.forEach.call(contactForm.querySelectorAll(".form-row, button[type=submit], .form-privacy"), function (el) {
+          el.hidden = true;
+        });
+        status.hidden = false;
+        status.textContent = "Mensagem enviada. A gente responde em breve.";
+        return;
+      }
+
       submitBtn.disabled = true;
       status.hidden = false;
       status.textContent = "Enviando...";
@@ -98,7 +110,7 @@
         .then(function (response) {
           if (response.ok) {
             contactForm.reset();
-            Array.prototype.forEach.call(contactForm.querySelectorAll(".form-row, button[type=submit]"), function (el) {
+            Array.prototype.forEach.call(contactForm.querySelectorAll(".form-row, button[type=submit], .form-privacy"), function (el) {
               el.hidden = true;
             });
             status.textContent = "Mensagem enviada. A gente responde em breve.";

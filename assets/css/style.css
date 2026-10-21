@@ -541,6 +541,8 @@
 .form-row textarea{ resize: vertical; min-height: 90px; }
 .contact-form .btn{ align-self: flex-start; margin-top: 0.25rem; }
 .contact-form .btn:disabled{ opacity: 0.6; cursor: default; }
+.form-privacy{ font-size: 0.75rem; color: var(--paper-soft); line-height: 1.4; margin-top: 0.125rem; }
+.form-privacy[hidden]{ display: none; }
 .form-status{ font-size: 0.9375rem; color: var(--paper-strong); }
 
 @media (max-width: 800px){
